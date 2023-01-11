@@ -12,6 +12,6 @@
         android:layout_width="185dp"
         android:layout_height="185dp"
         android:src="@drawable/splashscreen"
-        android:id="@+id/splash"
+        android:id="@+id/splashscreen"
         />
 </LinearLayout>
