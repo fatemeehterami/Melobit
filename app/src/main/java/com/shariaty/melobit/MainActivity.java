@@ -1,17 +1,13 @@
 package com.shariaty.melobit;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     Handler splash = new Handler();
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         splash.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this,MainActivityHome.class);
+                Intent i = new Intent(MainActivity.this,MainActivityMusic.class);
                 startActivity(i);
                 finish();
             }
