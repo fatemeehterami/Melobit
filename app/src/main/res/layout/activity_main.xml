@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     android:background="#222149"
     android:gravity="center">
 
@@ -13,5 +14,18 @@
         android:layout_height="185dp"
         android:src="@drawable/splashscreen"
         android:id="@+id/splashscreen"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/Titel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to my app"
+        android:textColor="#31B0E4"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
         />
 </LinearLayout>

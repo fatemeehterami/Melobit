@@ -1,4 +1,8 @@
 package com.shariaty.melobit;
 
-public class MainActivityHome {
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivityHome extends AppCompatActivity{
 }
