@@ -35,4 +35,8 @@ public class MusicList {
     public Uri getMusicFile() {
         return musicFile;
     }
+
+    public void setPlaying(boolean playing) {
+        isPlaying = playing;
+    }
 }

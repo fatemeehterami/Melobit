@@ -1,5 +1,9 @@
 package com.shariaty.melobit;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.MINUTES;
+
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +15,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder> {
     private final List<MusicList> list;
@@ -40,7 +48,31 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder
         else {
             holder.rootLayout.setBackgroundResource(R.drawable.round_back_10);
 
+
         }
+
+        String generateDuration= String.format(Locale.getDefault(),"%02d:02d%", TimeUnit.MILLISECONDS.toMinutes(Long.parseLong(list2.getDuration())),
+        TimeUnit.MILLISECONDS.toSeconds(Long.parseLong(list2.getDuration())) - TimeUnit.MINUTES.toSeconds(MILLISECONDS.toMinutes(Long.parseLong(list2.getDuration()))));
+
+
+
+
+
+        holder.title.setText(list2.getTitle());
+        holder.artist.setText(list2.getArtist());
+        holder.musicDuration.setText(list2.getDuration());
+
+
+        holder.rootLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                list2.setPlaying(true);
+
+            }
+        });
+
+
+
     }
 
     @Override
@@ -52,12 +84,14 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder
         private final RelativeLayout rootLayout;
         private final TextView title;
         private final TextView artist;
+        private final TextView musicDuration;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             rootLayout=itemView.findViewById(R.id.rootLayout);
             title=itemView.findViewById(R.id.musicTitle);
             artist=itemView.findViewById(R.id.musicArtist);
+            musicDuration =itemView.findViewById(R.id.musicDuration);
 
         }
     }
