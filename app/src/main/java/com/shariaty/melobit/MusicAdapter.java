@@ -22,12 +22,15 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder> {
-    private final List<MusicList> list;
+    private List<MusicList> list;
     private final Context context;
+    private int playingPosition=0;
+    private final SongChangeListener songChangeListener;
 
     public MusicAdapter(List<MusicList> list, Context context) {
         this.list  = list;
         this.context = context;
+        this.songChangeListener= ((SongChangeListener) context);
     }
 
     @SuppressLint("InflateParams")
@@ -43,6 +46,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder
 
         if(list2.isPlaying())
         {
+            playingPosition = position;
             holder.rootLayout.setBackgroundResource(R.drawable.round_back_blue_10);
         }
         else {
@@ -66,13 +70,23 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder
         holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                list.get(playingPosition).setPlaying(false);
                 list2.setPlaying(true);
+
+                songChangeListener.onChangeed(position);
+                notifyDataSetChanged();
+
 
             }
         });
 
 
 
+    }
+
+    public void updateList(List<MusicList>list){
+        this.list = list;
+        notifyDataSetChanged();
     }
 
     @Override
