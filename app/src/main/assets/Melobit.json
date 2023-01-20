@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "99e8727b-a08c-4f7f-b8da-96802f9bcad2",
+		"name": "Melobit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2212754"
+	},
+
+	"item": [
+		{
+			"name": "Latest Sliders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/song/slider/latest",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"song",
+						"slider",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		},
+
+		{
+			"name": "Latest Song",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/song/new/0/11",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"song",
+						"new",
+						"0",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trending Artist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/artist/trending/0/8",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artist",
+						"trending",
+						"0",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top 10 Day Song",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/song/top/day/0/100",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"song",
+						"top",
+						"day",
+						"0",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top 10 Week Song",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/song/top/week/0/100",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"song",
+						"top",
+						"week",
+						"0",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Song Details (Sample)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/song/NThRYnA",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"song",
+						"NThRYnA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Artist or Song (Sample)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-beta.melobit.com/v1/search/query/Masood%20Saeedi/0/50",
+					"protocol": "https",
+					"host": [
+						"api-beta",
+						"melobit",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search",
+						"query",
+						"Masood%20Saeedi",
+						"0",
+						"50"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
